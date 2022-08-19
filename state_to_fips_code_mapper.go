@@ -18,7 +18,6 @@
 package fips_state_codes
 
 import (
-	"errors"
 	"fmt"
 )
 
@@ -83,7 +82,7 @@ var stateCodeToVIPSCodeMap = map[string]string{
 func FIPSCodeFromStateCode(stateCode string) (string, error) {
 	got, ok := stateCodeToVIPSCodeMap[stateCode]
 	if !ok {
-		return "", errors.New(fmt.Sprintf("unknown state code: %s", stateCode))
+		return "", fmt.Errorf("unknown state code: %s", stateCode)
 	}
 	return got, nil
 }
