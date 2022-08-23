@@ -21,7 +21,7 @@ import (
 	"fmt"
 )
 
-var stateCodeToVIPSCodeMap = map[string]string{
+var stateCodeToFIPSCodeMap = map[string]string{
 	"AL": "01",
 	"AK": "02",
 	"AZ": "04",
@@ -80,14 +80,14 @@ var stateCodeToVIPSCodeMap = map[string]string{
 }
 
 func FIPSCodeFromStateCode(stateCode string) (string, error) {
-	got, ok := stateCodeToVIPSCodeMap[stateCode]
+	got, ok := stateCodeToFIPSCodeMap[stateCode]
 	if !ok {
 		return "", fmt.Errorf("unknown state code: %s", stateCode)
 	}
 	return got, nil
 }
 
-var vipsCodeToStateCodeMap = map[string]string{
+var fipsCodeToStateCodeMap = map[string]string{
 	"01": "AL",
 	"02": "AK",
 	"04": "AZ",
@@ -146,7 +146,7 @@ var vipsCodeToStateCodeMap = map[string]string{
 }
 
 func StateCodeFromFIPSCode(fipsCode string) (string, error) {
-	got, ok := vipsCodeToStateCodeMap[fipsCode]
+	got, ok := fipsCodeToStateCodeMap[fipsCode]
 	if !ok {
 		return "", fmt.Errorf("unknown fips code: %s", fipsCode)
 	}
