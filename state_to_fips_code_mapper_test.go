@@ -37,3 +37,17 @@ func TestFIPSCodeFromStateCode_ErrorsOnUnknownStateCode(t *testing.T) {
 	require.Error(t, err)
 	require.Equal(t, fmt.Sprintf("unknown state code: %s", inputCode), err.Error())
 }
+
+func TestStateCodeFromFIPSCode(t *testing.T) {
+	result, err := fips_state_codes.StateCodeFromFIPSCode("17")
+	require.NoError(t, err)
+	require.Equal(t, "IL", result)
+}
+
+func TestStateCodeFromFIPSCode_ErrorsOnUnknownStateCode(t *testing.T) {
+	inputCode := "ZZ"
+	result, err := fips_state_codes.StateCodeFromFIPSCode(inputCode)
+	require.Equal(t, "", result)
+	require.Error(t, err)
+	require.Equal(t, fmt.Sprintf("unknown fips code: %s", inputCode), err.Error())
+}
