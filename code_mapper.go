@@ -30,6 +30,7 @@ var stateCodeToFIPSCodeMap = map[string]string{
 	"CO": "08",
 	"CT": "09",
 	"DE": "10",
+	"DC": "11",
 	"FL": "12",
 	"GA": "13",
 	"HI": "15",
@@ -73,9 +74,13 @@ var stateCodeToFIPSCodeMap = map[string]string{
 	"WI": "55",
 	"WY": "56",
 	"AS": "60",
+	"FM": "64",
 	"GU": "66",
+	"MH": "68",
 	"MP": "69",
+	"PW": "70",
 	"PR": "72",
+	"UM": "74",
 	"VI": "78",
 }
 
@@ -96,6 +101,7 @@ var fipsCodeToStateCodeMap = map[string]string{
 	"08": "CO",
 	"09": "CT",
 	"10": "DE",
+	"11": "DC",
 	"12": "FL",
 	"13": "GA",
 	"15": "HI",
@@ -139,9 +145,13 @@ var fipsCodeToStateCodeMap = map[string]string{
 	"55": "WI",
 	"56": "WY",
 	"60": "AS",
+	"64": "FM",
 	"66": "GU",
+	"68": "MH",
 	"69": "MP",
+	"70": "PW",
 	"72": "PR",
+	"74": "UM",
 	"78": "VI",
 }
 
