@@ -1,4 +1,4 @@
-## v0.0.2 (Release 2023-07-24)
+## v0.1.0 (Release 2023-07-24)
 
 Add DC and other outlying area codes
 
