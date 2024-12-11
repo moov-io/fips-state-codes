@@ -18,7 +18,6 @@
 package fips_state_codes_test
 
 import (
-	"fmt"
 	"testing"
 
 	fips_state_codes "github.com/moov-io/fips-state-codes"
@@ -35,7 +34,7 @@ func TestFIPSCodeFromStateCode_ErrorsOnUnknownStateCode(t *testing.T) {
 	inputCode := "ZZ"
 	result, err := fips_state_codes.FIPSCodeFromStateCode(inputCode)
 	require.Equal(t, "", result)
-	require.EqualError(t, err, fmt.Sprintf("unknown state code: %s", inputCode))
+	require.EqualError(t, err, "unknown state code: "+inputCode)
 }
 
 func TestStateCodeFromFIPSCode(t *testing.T) {
@@ -48,5 +47,5 @@ func TestStateCodeFromFIPSCode_ErrorsOnUnknownStateCode(t *testing.T) {
 	inputCode := "ZZ"
 	result, err := fips_state_codes.StateCodeFromFIPSCode(inputCode)
 	require.Equal(t, "", result)
-	require.EqualError(t, err, fmt.Sprintf("unknown fips code: %s", inputCode))
+	require.EqualError(t, err, "unknown fips code: "+inputCode)
 }

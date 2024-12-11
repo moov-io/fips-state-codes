@@ -25,6 +25,7 @@ lint-project.sh
 coverage.html
 cover.out
 coverage.txt
+gitleaks.tar.gz
 
 *.pyc
 
