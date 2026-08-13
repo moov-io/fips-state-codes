@@ -2,7 +2,7 @@ module github.com/moov-io/fips-state-codes
 
 go 1.19
 
-toolchain go1.26.5
+toolchain go1.26.6
 
 require github.com/stretchr/testify v1.11.1
 
